@@ -16,7 +16,6 @@ flex: 1;
 display: flex;
 justify-content: center;
 align-content: center;
-background-color: pink;
 `
 const RightWrapper = styled.div`
 width: 80%;
@@ -39,6 +38,16 @@ const About = () => {
                     <RightTitle>My Tech Stack</RightTitle>
                         <IconsContainer>
                             <Icon/>
+                            <ul>
+                                <li>mostly worked with:</li>
+                                <li>html | css</li>
+                                <li>javascript</li>
+                                <li>React + styled components</li>
+                                <li>git + github</li>
+                                <li>...</li>
+
+                                <li>familiar with: sass, material ui, chakra ui</li>
+                            </ul>
                         </IconsContainer>
                 </RightWrapper>
             </Right>
