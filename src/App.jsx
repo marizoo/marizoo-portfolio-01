@@ -1,28 +1,45 @@
 import { useState } from "react";
-import { ThemeProvider } from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 import Menu from "./components/Menu";
-import TopBar from "./components/TopBar";
-
+import Sections from "./components/Sections";
+import Topbar from "./components/Topbar";
+import About from "./pages/About";
+import Blog from "./pages/Blog";
+import { Contact } from "./pages/Contact";
+import Home from "./pages/Home";
+import Projects from "./pages/Projects";
+import Testimonials from "./pages/Testimonials";
 
 const theme = {
   colors: {
-    primary: "#15023a",
-    secondary: "#e67171",
+    primary: "#1d1d1d",
+    secondary: "#ee6e6e"
   },
-  media: {
-    mobile: "768px"
-  }
 }
+
+const Cont = styled.div`
+height: 100vh;
+`
 
 const App = () => {
 
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false)
 
   return (
-    <ThemeProvider theme={theme}>
-     <TopBar menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
-     <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-    </ThemeProvider>
+   <ThemeProvider theme={theme}>
+     <Cont>
+     <Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
+     <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
+      <Sections>
+        <Home />
+        <About />
+        <Projects />
+        <Blog />
+        <Testimonials />
+        <Contact />
+      </Sections>
+      </Cont>
+   </ThemeProvider>
   );
 };
 

@@ -1,119 +1,122 @@
 import { Mail, Twitter } from '@material-ui/icons'
 import React from 'react'
-import styled from 'styled-components'
+import styled, {keyframes} from 'styled-components'
 
 const Cont = styled.div`
-display: flex;
-justify-content: space-between;
-align-items: center;
 height: 70px;
 width: 100vw;
-border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+display: flex;
+align-items: center;
+justify-content: space-between;
+border-bottom: 1px solid rgba(0 ,0, 0, 0.2);
+z-index: 2;
 position: fixed;
 top: 0;
-transition: all 2s ease;
-z-index: 2;
+transition: all 1s ease;
 
 &.active{
     background-color: ${({theme}) => theme.colors.primary};
     color: white;
 }
-
 `
 const Left = styled.div`
 flex: 1;
 display: flex;
-justify-content: space-space-between;
+align-items: center;
+justify-content: space-between;
 `
+
 const Logo = styled.a`
 flex: 1;
+color: inherit;
 text-decoration: none;
-cursor: pointer;
 margin-left: 30px;
-color: black;
-font-size: 35px;
-font-weight: 500;
+font-size: 40px;
+font-weight: 700;
 transition: all .6s ease;
 
-&:hover{
-    color: ${({theme}) => theme.colors.secondary};
+&:hover {
+color: ${({theme}) => theme.colors.secondary};
 }
 
 &.active{
-    color: white;
-
-    &:hover{
-        color: ${({theme}) => theme.colors.secondary};
-    }
-}
-
-span{
-    color: white;
-    animation: dot ease 6s alternate infinite;
-}
-
-
-@keyframes dot{
-    100%{
-        color: ${({theme}) => theme.colors.secondary};
-        margin-left: 10px;
-    }
+    background-color: ${({theme}) => theme.colors.primary};
 }
 `
+
+const dotAnim = keyframes`
+0%{
+    color: inherit;
+}
+
+100%{
+    color: red;
+    margin-left: 15px;
+`
+const Dot = styled.span`
+animation: ${dotAnim} 6s alternate infinite;
+`
+
+
 const ContactCont = styled.div`
-flex: 3;
+flex: 2;
 display: flex;
-justify-content: space-evenly;
-align-items: center;
+justify-content: end;
 `
 const ContactItem = styled.div`
 display: flex;
-justify-content: center;
 align-items: center;
-transition: all .6s ease;
-&:hover{
-    color: ${({theme}) => theme.colors.secondary};
+margin-left: 16px;
+cursor: pointer;
+transition: all 0.5s ease;
+
+&:hover {
+color: ${({theme}) => theme.colors.secondary};
 }
 `
-const Item = styled.a`
-margin-left: 5px;
-cursor: pointer;
+const ContactInfo = styled.span`
+margin-left: 3px;
 font-size: 12px;
+text-decoration: none;
 `
+
 
 const Right = styled.div`
 flex: 1;
 display: flex;
-justify-content: flex-end;
+justify-content: end;
 `
 
 const Hamburger = styled.div`
-margin-right: 40px;
 cursor: pointer;
-width: 30px;
+margin-right: 35px;
+width: 32px;
 height: 25px;
 display: flex;
 flex-direction: column;
+align-content: center;
 justify-content: space-between;
 `
 const Line1 = styled.span`
 width: 100%;
 height: 3px;
 background-color: black;
+transition: all 1s ease;
 transform-origin: left;
-transition: all 2s ease;
+
 &.active{
-   background-color: white;
-   transform: rotate(45deg);
+transform: rotate(45deg);
+background-color: white;
 }
 `
 const Line2 = styled.span`
 width: 100%;
 height: 3px;
 background-color: black;
-transition: all 2s ease;
+transition: all 1s ease;
+
 &.active{
-   opacity: 0;
+ opacity: 0;
 }
 `
 
@@ -121,33 +124,35 @@ const Line3 = styled.span`
 width: 100%;
 height: 3px;
 background-color: black;
+transition: all 1s ease;
 transform-origin: left;
-transition: all 2s ease;
-&.active{
-   background-color: white;
-   transform: rotate(-45deg);
-}
-`
-    
 
-const TopBar = ({menuOpen, setMenuOpen}) => {
+&.active{
+transform: rotate(-45deg);
+background-color: white;
+
+`
+
+const Topbar = ({menuOpen, setMenuOpen}) => {
     return (
         <Cont className={menuOpen && "active"}>
-            <Left>
-                <Logo className={menuOpen && "active"} href="#home">
-                    Mazoo<span>.</span>
+            <Left>              
+                    <Logo className={menuOpen && "active"} href="#intro">
+                        Marizoo
+                        <Dot>.</Dot>
+                       
                     </Logo>
+                
                 <ContactCont>
                     <ContactItem>
                         <Twitter/>
-                        <Item >@_marizoo</Item>
+                        <ContactInfo>@_marizoo</ContactInfo>
                     </ContactItem>
                     <ContactItem>
                         <Mail/>
-                        <Item>marizoo@meow.com</Item>
+                        <ContactInfo>marizoo@meow.com</ContactInfo>
                     </ContactItem>
                 </ContactCont>
-
             </Left>
 
             <Right>
@@ -161,4 +166,4 @@ const TopBar = ({menuOpen, setMenuOpen}) => {
     )
 }
 
-export default TopBar
+export default Topbar
