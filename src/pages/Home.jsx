@@ -106,9 +106,9 @@ const Home = () => {
                     <TitleMiddle>Marizoo</TitleMiddle>
                     <TitleBottom>
                         <TBWrapper>
-                            <TBItem>Web Developer</TBItem>
-                            <TBItem>Blogger</TBItem>
-                            <TBItem>Musician</TBItem>
+                            <TBItem>Front-end Web Developer</TBItem>
+                            <TBItem>Aspiring full-stack developer</TBItem>
+                            <TBItem>Your friend  ;-)</TBItem>
                         </TBWrapper>
                     </TitleBottom>
                 </Wrapper>
