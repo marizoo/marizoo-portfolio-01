@@ -13,8 +13,7 @@ scroll-snap-align: start;
 
 const Wrapper = styled.div`
 width: 60%;
-font-size: 20px
-;
+font-size: 20px;
 `
 
 const Blog = () => {

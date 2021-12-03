@@ -25,7 +25,7 @@ margin-top: 100px;
 display: flex;
 flex-direction: column;
 justify-content: space-between;
-color: crimson;
+color: white;
 
 `
 

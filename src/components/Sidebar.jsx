@@ -141,7 +141,7 @@ const Sidebar = () => {
                         </DescItem>
                         <DescItem>
                             <Questions>Describe yourself.</Questions>
-                           <Answers>I'm not a shy intovert, a flexitarian and I need a quiet space to focus at work & to rest.<br/> 
+                           <Answers>I'm not a shy intovert, quite a hippie, a flexitarian and I need a quiet space to focus at work & to rest.<br/> 
                            </Answers>
                            <Answers>Did you know Oprah Winfrey and Simon Sinek are introverts too? </Answers>
                         </DescItem>
@@ -152,8 +152,13 @@ const Sidebar = () => {
                         </DescItem>
                         <DescItem>
                             <Questions>What is your deal breaker?</Questions>
-                          <Answers>Anything to do with clubbing and techno / heavymetal / <br/>
-                          dangdut music / bts / blackpink / K-pop. Yuck...</Answers>
+                          <Answers>Anything to do with clubbing and techno / house/  <br/>
+                          heavymetal / dangdut music / bts / blackpink / K-pop. Yuck...</Answers>
+                        </DescItem>
+                        <DescItem>
+                            <Questions>What is your deal maker?</Questions>
+                          <Answers>Cool vibes, kind & passionate peeps. <br/>
+                          Good taste in music, ditch social media & connect the old school way.</Answers>
                         </DescItem>
                         <DescItem>
                             <Questions>Any last words?</Questions>
