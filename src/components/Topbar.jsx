@@ -52,7 +52,7 @@ color: ${({theme}) => theme.colors.secondary};
 const dotAnim = keyframes`
 0% {
     color: crimson;
-    transform: translateY(0px);
+    transform: translateX(0px);
 }
 40%{
     color: crimson;
@@ -65,7 +65,7 @@ const dotAnim = keyframes`
 
 100%{
     color: crimson;
-    transform: translateY(0px);
+    transform: translateX(15px);
 }
 `
 

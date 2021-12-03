@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 
 const Cont = styled.div`
-background-color: #e9cbd1;
+background-color: #ebebeb;
 flex: 1;
 position: sticky;
 bottom: 0;
