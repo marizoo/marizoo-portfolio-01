@@ -6,7 +6,6 @@ display: flex;
 width: 100vw;
 height: calc(100vh - 70px);
 scroll-snap-align: start;
-background-color: white;
 `
 
 const Left = styled.div`

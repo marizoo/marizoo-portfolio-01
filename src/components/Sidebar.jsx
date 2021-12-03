@@ -5,7 +5,7 @@ import styled from 'styled-components'
 const Cont = styled.div`
 flex: 1;
 position: sticky;
-top: 0;
+bottom: 0;
 overflow-y: scroll;
 
 &::-webkit-scrollbar {
@@ -78,61 +78,64 @@ const Sidebar = () => {
                         <DescItem>
                             <Questions>What are you?</Questions>
                             <Answers>A community taught developer.</Answers>
+                            <Answers>I learned from kind folks on youtube, udemy, freecodecamp, skillshare, etc.</Answers>
                         </DescItem>
-                        <DescItem>
-                            <Questions>What is that?</Questions>
-                            <Answers>I learned from sites like youtube, udemy, freecodecamp, etc.</Answers>
-                        </DescItem>
+                  
                         <DescItem>
                             <Questions>When did you started?</Questions>
                             <Answers>Officially, since June 2021</Answers>
                         </DescItem>
                         <DescItem>
-                            <Questions>Do you love coding?</Questions>
+                            <Questions>Do you like coding?</Questions>
                             <Answers>Dude... duh...</Answers>
                         </DescItem>
                         <DescItem>
-                            <Questions>Why do you like it?</Questions>
-                            <Answers>Few reasons, one of them is...</Answers>
-                            <Answers>Do you know the 'high' feeling you get, <br />
-                            when you've reached a mountain top?</Answers>
-                            <Answers>(hoping you nod...) <br/>
-                            Yeah I get the same high when I killed a bug or finished a project.</Answers>
+                            <Questions>Why do you like coding?</Questions>
+                            <Answers>I get "feel-good" hormonal releases from it:</Answers>
+                            <Answers>- Endorphine high from killing bugs / finishing a project</Answers>
+                            <Answers>- Dopamine dope from gaining new skills</Answers>
+                            <Answers>- WHen I get to work in a team, I'll get Oxytocin release from working on common purpose</Answers>
                             <Answers>Best. Feeling. Ever!</Answers>
 
                         </DescItem>
                         
                         <DescItem>
                             <Questions>Any tech related experiences before this?</Questions>
-                           <Answers>I was a CAD tutor (autocad 2d & 3d) back in my university days.</Answers>
-                           <Answers>I made a wordpress website, for myself.</Answers>
-                           <Answers>in 2019, I joined the "Women in Tech" weekend bootcamp, and our team won. Woop woop!</Answers>
-                           <Answers>Nothing much else, I mostly worked in remote areas with very little to no internet</Answers>
+                           <Answers>Back in Uni, I was a CAD tutor (autocad 2d & 3d).</Answers>
+                           <Answers>Few years back, I made a wordpress websites.</Answers>
+                           <Answers>in 2019, I joined the "Women in Tech" weekend bootcamp.</Answers>
                         </DescItem>
                         <DescItem>
-                            <Questions>What was your previous job?</Questions>
-                           <Answers>I worked as a junior architect in Malaysia after graduating from university. <br />
-                           Then i switched to the service Industry, mainly in diving & recreation.<br/>
-                           I was (still am) a dive instructor for 10 years + i just took a yoga teacher training in late 2019</Answers>
+                            <Questions>List your previous jobs?</Questions>
+                           <Answers>Cad tutor</Answers>
+                           <Answers>Junior Architect</Answers>
+                           <Answers>Dive guide & marketing agent</Answers>
+                           <Answers>Dive Instructor</Answers>
+                           <Answers>Cruise Director</Answers>
+                           <Answers>Dive center manager</Answers>
+                           <Answers>Activity Manager</Answers>
+                           <Answers>Activity guide + Yoga Teacher</Answers>
                         </DescItem>
+                        
                         <DescItem>
-                            <Questions>Why web development now?</Questions>
-                           <Answers>I always knew diving was not going to be my forever job</Answers>
-                           <Answers>My goal was to travel + dive in the best dive location in Indonesia</Answers>
-                           <Answers>did that! done that!</Answers>
-                           <Answers>Tech has been an industry I'm interested in, especially coding, I love projects + building stuff</Answers>
-                        </DescItem>
-                        <DescItem>
-                            <Questions>Do you think Web development is right for you?</Questions>
+                            <Questions>Is Web development right for you?</Questions>
                            <Answers>It's perfect for me</Answers>
-                           <Answers>I love to learn + grow. Novelty excites me: be it projects, people, team, bring it, let's do it. I'm in.</Answers>
+                           <Answers>I love to learn + grow. Novelty excites me.</Answers>
                         </DescItem>
                         <DescItem>
-                            <Questions>There must be parts that you hated?</Questions>
-                           <Answers>Oh definitely!</Answers>
+                            <Questions>What parts of coding that you hate?</Questions>
                            <Answers>Sitting all day, my eye strain, and all those bugs</Answers>
-                           <Answers>But I've learned to move about in between.</Answers>
                            <Answers>And I am where I am now from killing those bugs, so bring it bugs  ;-)</Answers>
+                        </DescItem>
+                        <DescItem>
+                            <Questions>What are your fears?</Questions>
+                           <Answers>Since I've been coding on my own, I wonder if I've developed some pet peeves for others</Answers>
+                           <Answers>Like saying things in my head out loud. So please pardon my "french".</Answers>
+                        </DescItem>
+                        <DescItem>
+                            <Questions>What is in the pipeline?</Questions>
+                           <Answers>Depends what the work will need, I guess venturing to the back side, with MERN stack</Answers>
+                           <Answers>But... Three.js looks pretty darn cool. So... </Answers>
                         </DescItem>
                         
 

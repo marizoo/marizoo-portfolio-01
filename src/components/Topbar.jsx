@@ -11,7 +11,7 @@ justify-content: space-between;
 border-bottom: 1px solid rgba(0 ,0, 0, 0.2);
 z-index: 2;
 position: fixed;
-top: 0;
+bottom: 0;
 transition: all 1s ease;
 
 &.active{
