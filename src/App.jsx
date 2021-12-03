@@ -7,6 +7,7 @@ import About from "./pages/About";
 import Blog from "./pages/Blog";
 import { Contact } from "./pages/Contact";
 import Home from "./pages/Home";
+import Intro from "./pages/Intro";
 import Projects from "./pages/Projects";
 import Testimonials from "./pages/Testimonials";
 
@@ -31,6 +32,7 @@ const App = () => {
      <Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
      <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
       <Sections>
+        <Intro />
         <Home />
         <About />
         <Projects />

@@ -25,58 +25,80 @@ display: flex;
 align-items: center;
 justify-content: space-between;
 `
+const LogoCont = styled.div`
+flex: 1;
+display: flex;
+flex-direction: row;
+`
 
 const Logo = styled.a`
-flex: 1;
 color: inherit;
 text-decoration: none;
 margin-left: 30px;
 font-size: 40px;
-font-weight: 700;
+font-weight: 600;
 transition: all .6s ease;
+color: grey;
 
 &:hover {
 color: ${({theme}) => theme.colors.secondary};
 }
 
 &.active{
-    background-color: ${({theme}) => theme.colors.primary};
+    color: white;
 }
 `
 
 const dotAnim = keyframes`
-0%{
-    color: inherit;
+0% {
+    color: crimson;
+    transform: translateY(0px);
+}
+40%{
+    color: crimson;
+    transform: translateX(15px);
+}
+50%{
+    color: crimson;
+    transform: translateX(15px);
 }
 
 100%{
-    color: red;
-    margin-left: 15px;
+    color: crimson;
+    transform: translateY(0px);
+}
 `
-const Dot = styled.span`
-animation: ${dotAnim} 6s alternate infinite;
+
+const Dot = styled.div`
+font-size: 40px;
+animation: ${dotAnim} 5s alternate 3s infinite;
+color: inherit;
 `
 
 
 const ContactCont = styled.div`
-flex: 2;
+flex: 1.5;
 display: flex;
-justify-content: end;
+justify-content: start;
 `
 const ContactItem = styled.div`
 display: flex;
 align-items: center;
-margin-left: 16px;
+margin-left: 30px;
 cursor: pointer;
 transition: all 0.5s ease;
+color: gray;
 
 &:hover {
 color: ${({theme}) => theme.colors.secondary};
 }
+
+&.active{
+    color: white;
 `
 const ContactInfo = styled.span`
 margin-left: 3px;
-font-size: 12px;
+font-size: 16px;
 text-decoration: none;
 `
 
@@ -130,25 +152,25 @@ transform-origin: left;
 &.active{
 transform: rotate(-45deg);
 background-color: white;
-
 `
 
 const Topbar = ({menuOpen, setMenuOpen}) => {
     return (
         <Cont className={menuOpen && "active"}>
-            <Left>              
-                    <Logo className={menuOpen && "active"} href="#intro">
+            <Left>        
+                <LogoCont>      
+                    <Logo className={menuOpen && "active"} href="#home">
                         Marizoo
-                        <Dot>.</Dot>
-                       
                     </Logo>
-                
-                <ContactCont>
-                    <ContactItem>
+                    <Dot>.</Dot> 
+                        
+                </LogoCont> 
+                <ContactCont  >
+                    <ContactItem className={menuOpen && "active"}>
                         <Twitter/>
                         <ContactInfo>@_marizoo</ContactInfo>
                     </ContactItem>
-                    <ContactItem>
+                    <ContactItem className={menuOpen && "active"}>
                         <Mail/>
                         <ContactInfo>marizoo@meow.com</ContactInfo>
                     </ContactItem>

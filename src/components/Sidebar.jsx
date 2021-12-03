@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 
 const Cont = styled.div`
+background-color: #e9cbd1;
 flex: 1;
 position: sticky;
 bottom: 0;
@@ -41,6 +42,7 @@ const LeftTitle = styled.span`
 font-size: 25px;
 font-weight: 500;
 `
+
 const Desc = styled.div`
 display: flex;
 flex-direction: column;
@@ -58,13 +60,15 @@ margin: 10px 0;
 `
 
 const Questions = styled.span`
-font-weight: 500;
+font-weight: 900;
 color: #747474;
-
+margin-bottom: 2px;
+font-size: 16px;
 `
 
 const Answers = styled.span`
 margin-left: 20px;
+margin-top: 5px;
 `
 
 
@@ -73,14 +77,9 @@ const Sidebar = () => {
         <Cont>
             <Left>
                 <LeftWrapper>
-                    <LeftTitle>My Tech FAQ</LeftTitle>
+                    <LeftTitle>FAQ's.</LeftTitle>
                     <Desc> 
-                        <DescItem>
-                            <Questions>What are you?</Questions>
-                            <Answers>A community taught developer.</Answers>
-                            <Answers>I learned from kind folks on youtube, udemy, freecodecamp, skillshare, etc.</Answers>
-                        </DescItem>
-                  
+                       
                         <DescItem>
                             <Questions>When did you started?</Questions>
                             <Answers>Officially, since June 2021</Answers>
@@ -92,18 +91,18 @@ const Sidebar = () => {
                         <DescItem>
                             <Questions>Why do you like coding?</Questions>
                             <Answers>I get "feel-good" hormonal releases from it:</Answers>
-                            <Answers>- Endorphine high from killing bugs / finishing a project</Answers>
-                            <Answers>- Dopamine dope from gaining new skills</Answers>
-                            <Answers>- WHen I get to work in a team, I'll get Oxytocin release from working on common purpose</Answers>
-                            <Answers>Best. Feeling. Ever!</Answers>
+                            <Answers>- Endorphine high from killing bugs / finishing a project.</Answers>
+                            <Answers>- Dopamine dope from gaining new skills & having a meaningful purpose.</Answers>
+                            <Answers>- I'll get Oxytocin release from working in a team.</Answers>
+                            <Answers>Best. Feelings. Ever!</Answers>
 
                         </DescItem>
                         
                         <DescItem>
-                            <Questions>Any tech related experiences before this?</Questions>
-                           <Answers>Back in Uni, I was a CAD tutor (autocad 2d & 3d).</Answers>
-                           <Answers>Few years back, I made a wordpress websites.</Answers>
-                           <Answers>in 2019, I joined the "Women in Tech" weekend bootcamp.</Answers>
+                            <Questions>Do you have any tech related experiences before this?</Questions>
+                           <Answers>I was a CAD tutor (autocad 2d & 3d),</Answers>
+                           <Answers>then I made a wordpress websites.</Answers>
+                           <Answers>In 2019, I joined the "Women in Tech" weekend bootcamp.</Answers>
                         </DescItem>
                         <DescItem>
                             <Questions>List your previous jobs?</Questions>
@@ -123,19 +122,43 @@ const Sidebar = () => {
                            <Answers>I love to learn + grow. Novelty excites me.</Answers>
                         </DescItem>
                         <DescItem>
-                            <Questions>What parts of coding that you hate?</Questions>
-                           <Answers>Sitting all day, my eye strain, and all those bugs</Answers>
-                           <Answers>And I am where I am now from killing those bugs, so bring it bugs  ;-)</Answers>
+                            <Questions>What do you hate about coding?</Questions>
+                           <Answers>Sitting all day, my eye strain, and all those bugs.</Answers>
+                           <Answers>I actually made those bugs.. noob errors.</Answers>
                         </DescItem>
+                        
                         <DescItem>
                             <Questions>What are your fears?</Questions>
-                           <Answers>Since I've been coding on my own, I wonder if I've developed some pet peeves for others</Answers>
-                           <Answers>Like saying things in my head out loud. So please pardon my "french".</Answers>
+                           <Answers>Since I've been coding on my own, I wonder if I've developed some <br/> 
+                           pet peeves for others.</Answers>
+                           <Answers>Like thinking out loud.. and, do pardon my "french".</Answers>
                         </DescItem>
                         <DescItem>
                             <Questions>What is in the pipeline?</Questions>
-                           <Answers>Depends what the work will need, I guess venturing to the back side, with MERN stack</Answers>
+                           <Answers>Depends what the project will need, <br/> 
+                           but I guess venturing to the back side, with MERN stack.</Answers>
                            <Answers>But... Three.js looks pretty darn cool. So... </Answers>
+                        </DescItem>
+                        <DescItem>
+                            <Questions>Describe yourself.</Questions>
+                           <Answers>I'm not a shy intovert, a flexitarian and I need a quiet space to focus at work & to rest.<br/> 
+                           </Answers>
+                           <Answers>Did you know Oprah Winfrey and Simon Sinek are introverts too? </Answers>
+                        </DescItem>
+                        <DescItem>
+                            <Questions>What do you do for fun?</Questions>
+                          <Answers>Outdoor Sports: <del>wall</del> tennis, diving, etc.</Answers>
+                          <Answers>Busking, <del>reading</del> browsing books / music.</Answers>
+                        </DescItem>
+                        <DescItem>
+                            <Questions>What is your deal breaker?</Questions>
+                          <Answers>Anything to do with clubbing and techno / heavymetal / <br/>
+                          dangdut music / bts / blackpink / K-pop. Yuck...</Answers>
+                        </DescItem>
+                        <DescItem>
+                            <Questions>Any last words?</Questions>
+                          <Answers>Yes. I'm a huge ally for the lgbtq community & I'm against bullying.</Answers>
+                          <Answers> So be kind, live and let live.</Answers>
                         </DescItem>
                         
 

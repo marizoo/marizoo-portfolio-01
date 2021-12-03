@@ -25,11 +25,13 @@ margin-top: 100px;
 display: flex;
 flex-direction: column;
 justify-content: space-between;
+color: crimson;
 
 `
 
 const Li = styled.li`
 transition: all .3s ease;
+cursor: pointer;
 
 &:hover{
     color: ${({theme}) => theme.colors.secondary};
@@ -41,6 +43,7 @@ color: inherit;
 text-decoration: none;
 font-size: 20px;
 font-weight: 300;
+cursor: pointer;
 
 `
     
@@ -55,6 +58,9 @@ const Menu = ({menuOpen, setMenuOpen}) => {
     return (
         <Cont className={menuOpen && "active"}>
             <Ul>
+                <Li onClick={closeMenu}>
+                    <Aa href="#intro">Intro</Aa>
+                </Li>
                 <Li onClick={closeMenu}>
                     <Aa href="#home">Home</Aa>
                 </Li>

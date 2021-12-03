@@ -19,19 +19,21 @@ overflow: hidden;
 `
 
 const Circle = styled.div`
-width: 700px;
-height: 700px;
+width: 1100px;
+height: 1100px;
 border-radius: 50%;
 background-color: crimson;
 display: flex;
 align-items: center;
 justify-content: end;
 position: absolute;
-right: 10%;
+right: 5%;
 `
 
 const Image = styled.img`
-width: 80%;
+width: 70%;
+position: absolute;
+right: 0;
 `
 
 const Right = styled.div`
@@ -47,11 +49,11 @@ justify-content: center;
 align-items: flex-start;
 `
 const TitleTop = styled.span`
-font-size: 40px;
+font-size: 50px;
 font-weight: 600;
 `
 const TitleMiddle = styled.span`
-font-size: 80px;
+font-size: 100px;
 font-weight: 700;
 `
 
@@ -67,7 +69,7 @@ const TextAnim = keyframes`
   100% {
     transform: translateY(-100px);
   }
-  /* 75% {
+  /* 100% {
     transform: translateY(-150px);
   } */
   /* 100% {
@@ -107,7 +109,7 @@ const Home = () => {
                         <TBWrapper>
                             <TBItem>Front-end Web Developer</TBItem>
                             <TBItem>Aspiring full-stack developer</TBItem>
-                            <TBItem>Your friend  ;-)</TBItem>
+                            <TBItem>i like corny puns</TBItem>
                         </TBWrapper>
                     </TitleBottom>
                 </Wrapper>

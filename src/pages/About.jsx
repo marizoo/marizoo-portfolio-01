@@ -12,18 +12,33 @@ overflow: hidden;
 `
 
 const Right = styled.div`
-flex: 1;
+flex: 1.5;
 display: flex;
 justify-content: center;
 align-content: center;
 `
 const RightWrapper = styled.div`
 width: 80%;
+margin: 30px;
 `
 
 const RightTitle = styled.span`
-font-size: 20px;
+font-size: 30px;
 font-weight: 500;
+`
+const DescWrapper = styled.span`
+display: flex;
+flex-direction: column;
+margin-top: 15px;
+`
+
+const DescTitle = styled.span`
+font-size: 20px;
+font-weight: 400;
+`
+const Desc = styled.span`
+font-size: 20px;
+font-weight: 400;
 `
 
 const IconsContainer = styled.div``
@@ -32,10 +47,14 @@ const Icon = styled.img``
 const About = () => {
     return (
         <Cont id="about">
-            <Sidebar />
+           
             <Right>
                 <RightWrapper>
                     <RightTitle>My Tech Stack</RightTitle>
+                    <DescWrapper>
+                    <DescTitle>Hello! I'm a community taught developer,</DescTitle>
+                    <Desc>I learned these stacks from kind folks on the internet.</Desc>
+                    </DescWrapper>
                         <IconsContainer>
                             <Icon/>
                             <ul>
@@ -51,7 +70,7 @@ const About = () => {
                         </IconsContainer>
                 </RightWrapper>
             </Right>
-           
+            <Sidebar />
         </Cont>
     )
 }
