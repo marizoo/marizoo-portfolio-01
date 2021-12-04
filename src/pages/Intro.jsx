@@ -73,13 +73,19 @@ const Intro = () => {
         <Cont id="intro">
             
                 <Wrapper>
-                <Titles>
+                {/* <Titles>
                 <BigTitle>A faux pa</BigTitle>
                 <MedTitle></MedTitle>
                 <SmallTitle>Source: random world wide web</SmallTitle>
                 <Desc>: Someone who likes to tell Dad jokes, <br/>
                 but doesn't actually have children of his own.</Desc>
-                </Titles>
+                </Titles> */}
+                {/* <Titles>
+                
+                <SmallTitle>WARNING!</SmallTitle>
+                <Desc>This site contains corny puns <br/>
+                I won't be accountable for any offense or eye strain from your eye rolls.</Desc>
+                </Titles> */}
                 <ImgWrapper>
                     <Img src="./assets/dev-egg.svg"/>
                 </ImgWrapper>

@@ -62,6 +62,11 @@ height: 35px;
 overflow: hidden;
 `
 
+const TitleWarning = styled.p`
+color: gray;
+margin-top: 20px;
+`
+
 const TextAnim = keyframes`
 50% {
     transform: translateY(-50px);
@@ -112,6 +117,12 @@ const Home = () => {
                             <TBItem>i like corny puns</TBItem>
                         </TBWrapper>
                     </TitleBottom>
+                    <TitleWarning>
+                        WARNING! <br/>
+                    This site contains corny puns <br/>
+                I won't be accountable for any offense or eye strain from your eye rolls.
+                
+                    </TitleWarning>
                 </Wrapper>
             </Right>
         </Cont>

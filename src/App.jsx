@@ -32,8 +32,8 @@ const App = () => {
      <Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
      <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
       <Sections>
-        <Intro />
         <Home />
+        <Intro />
         <About />
         <Projects />
         <Blog />

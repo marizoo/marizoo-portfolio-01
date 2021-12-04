@@ -82,7 +82,7 @@ const ContInner = styled.div`
 display: flex;
 justify-content: space-between;
 align-items: center;
-background-color: pink;
+/* background-color: pink; */
 `
 
 
@@ -186,27 +186,27 @@ const Testimonials = () => {
                 <ContInner >
                    <TestimonialCard >
                         <Image src={testi.img}/>
+                        <Testimonial>{testi.testimonial}</Testimonial>
                         <NameCont>
                             <Name>{testi.name}</Name>
                             <NameDesc>{testi.nameDesc}</NameDesc>
                         </NameCont>
-                        <Testimonial>{testi.testimonial}</Testimonial>
                     </TestimonialCard>
                    <TestimonialCard >
                         <Image src={testi.img}/>
+                        <Testimonial>{testi.testimonial}</Testimonial>
                         <NameCont>
                             <Name>{testi.name}</Name>
                             <NameDesc>{testi.nameDesc}</NameDesc>
                         </NameCont>
-                        <Testimonial>{testi.testimonial}</Testimonial>
                     </TestimonialCard>
                    <TestimonialCard >
                         <Image src={testi.img}/>
+                        <Testimonial>{testi.testimonial}</Testimonial>
                         <NameCont>
                             <Name>{testi.name}</Name>
                             <NameDesc>{testi.nameDesc}</NameDesc>
                         </NameCont>
-                        <Testimonial>{testi.testimonial}</Testimonial>
                     </TestimonialCard>
                    
                 </ContInner>

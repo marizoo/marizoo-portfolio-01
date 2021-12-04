@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import Sidebar from '../components/Sidebar'
+import {FaHtml5, FaCss3Alt, FaGithub, FaReact, } from 'react-icons/fa'
+import {SiJavascript, SiStyledcomponents } from 'react-icons/si'
 
 const Cont = styled.div`
 display: flex;
@@ -12,24 +13,26 @@ overflow: hidden;
 `
 
 const Right = styled.div`
-flex: 1.5;
+flex: 1;
 display: flex;
 justify-content: center;
 align-content: center;
 `
 const RightWrapper = styled.div`
-width: 80%;
-margin: 30px;
+width: 90%;
+margin: 50px;
 `
 
 const RightTitle = styled.span`
-font-size: 30px;
+font-size: 40px;
 font-weight: 500;
+margin-top: 20px;
 `
 const DescWrapper = styled.span`
 display: flex;
 flex-direction: column;
-margin-top: 15px;
+margin-top: 30px;
+line-height: 30px;
 `
 
 const DescTitle = styled.span`
@@ -42,35 +45,87 @@ font-weight: 400;
 `
 
 const IconsContainer = styled.div``
-const Icon = styled.img``
+const Ul = styled.ul`
+list-style: none;
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+width: 90%;
+margin-top: 30px;
+`
+const ItemCont = styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+margin: 30px;
+line-height: 25px;
+`
+const Item = styled.li`
+font-size: 70px;
+color: #575757;
+`
+const ListDesc = styled.span`
+font-size: 16px;
+margin-top: 10px;
+`
+
+const Left = styled.div`
+flex: 1.3;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: pink;
+`
+const LeftWrapper = styled.div``
 
 const About = () => {
     return (
         <Cont id="about">
-           
             <Right>
                 <RightWrapper>
                     <RightTitle>My Tech Stack</RightTitle>
                     <DescWrapper>
-                    <DescTitle>Hello! I'm a community taught developer,</DescTitle>
-                    <Desc>I learned these stacks from kind folks on the internet.</Desc>
+                    <DescTitle>Here are the stacks I'm currently using in my projects</DescTitle>
+                    <Desc></Desc>
                     </DescWrapper>
                         <IconsContainer>
-                            <Icon/>
-                            <ul>
-                                <li>mostly worked with:</li>
-                                <li>html | css</li>
-                                <li>javascript</li>
-                                <li>React + styled components</li>
-                                <li>git + github</li>
-                                <li>...</li>
+                            <Ul>
+                                <ItemCont>
+                                <Item><FaHtml5/></Item>
+                                <ListDesc>HTML 5</ListDesc>
+                                </ItemCont>
+                                <ItemCont>
+                                <Item><FaCss3Alt/></Item>
+                                <ListDesc>CSS 3</ListDesc>
+                                </ItemCont>
+                                <ItemCont>
+                                <Item><SiJavascript/></Item>
+                                <ListDesc>JavaScript</ListDesc>
+                                </ItemCont>
+                                <ItemCont>
+                                <Item><FaGithub/></Item>
+                                <ListDesc>Git & Github</ListDesc>
+                                </ItemCont>
+                                <ItemCont>
+                                <Item><FaReact/></Item>
+                                <ListDesc>React</ListDesc>
+                                </ItemCont>
+                                <ItemCont>
+                                <Item><SiStyledcomponents/></Item>
+                                <ListDesc>Styled Components</ListDesc>
+                                </ItemCont>
 
-                                <li>familiar with: sass, material ui, chakra ui</li>
-                            </ul>
+                            </Ul>
                         </IconsContainer>
                 </RightWrapper>
+                
             </Right>
-            <Sidebar />
+            <Left>
+                <LeftWrapper>
+                    hello world joke!!!
+                </LeftWrapper>
+            </Left>
         </Cont>
     )
 }

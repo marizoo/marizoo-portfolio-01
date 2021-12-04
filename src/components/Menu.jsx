@@ -59,10 +59,10 @@ const Menu = ({menuOpen, setMenuOpen}) => {
         <Cont className={menuOpen && "active"}>
             <Ul>
                 <Li onClick={closeMenu}>
-                    <Aa href="#intro">Intro</Aa>
+                    <Aa href="#home">Home</Aa>
                 </Li>
                 <Li onClick={closeMenu}>
-                    <Aa href="#home">Home</Aa>
+                    <Aa href="#intro">Intro</Aa>
                 </Li>
                 <Li onClick={closeMenu}>
                     <Aa href="#about">About</Aa>
