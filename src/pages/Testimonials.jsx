@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 
 const Cont = styled.div`
@@ -9,44 +9,80 @@ align-items: center;
 width: 100vw;
 height: calc(100vh - 70px);
 scroll-snap-align: start;
+background-color: crimson;
 `
 
 const Title = styled.span`
 font-size: 40px;
-margin: 15px 0;
+font-weight: 500;
 `
-const Wrapper = styled.div`
-display: flex;
-justify-content: space-around;
-align-items: center;
-width: 100%;
+
+const Cont1 = styled.div`
 height: 80%;
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+position: relative;
+
 `
+
+const Slider = styled.div`
+width: 75%;
+height: 100%;
+display: flex;
+position: absolute;
+left: 0;
+top: 0;
+transition: all 1s ease-out;
+`
+
+const Item = styled.div`
+width: 100%;
+height: 100%;
+border-radius: 20px;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: white;
+margin-left: 300px;
+`
+
 const ArrowLeftCont = styled.div`
-height: 80px;
-width: 80px;
+height: 50px;
+width: 50px;
+cursor: pointer;
+position: absolute;
+left: 2.5%;
+top: 45%;
+z-index: 3;
 `
 
 const ArrowLeft = styled.img`
-background-color: grey;
 transform: rotate(180deg);
 height: 100%;
 width: 100%;
 `
 const ArrowRightCont = styled.div`
-height: 80px;
-width: 80px;
+cursor: pointer;
+height: 50px;
+width: 50px;
+position: absolute;
+right: 2.5%;
+top: 45%;
+z-index: 3;
 `
 
 const ArrowRight = styled.img`
-background-color: grey;
 height: 100%;
 width: 100%;
 `
 
-
 const ContInner = styled.div`
 display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: pink;
 `
 
 
@@ -94,43 +130,94 @@ text-align: center;
 `
 
 const Testimonials = () => {
+
+    const [currentSlide, setCurrentSlide] = useState(0);
+
+    const testiData = [
+        {
+            id: "1",
+            name: "Eva Green ONE",
+            nameDesc: "Queen of the world",
+            testimonial:
+              "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+            img:
+            "https://images.pexels.com/photos/4126738/pexels-photo-4126738.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+         },
+        {
+            id: "2",
+            name: "Eva Green TWO",
+            nameDesc: "Queen of the world",
+            testimonial:
+              "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+            img:
+            "https://images.pexels.com/photos/4126738/pexels-photo-4126738.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+         },
+        {
+            id: "3",
+            name: "Eva Green THREE",
+            nameDesc: "Queen of the world",
+            testimonial:
+              "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+            img:
+            "https://images.pexels.com/photos/4126738/pexels-photo-4126738.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+         },
+        
+        
+        
+    ]
+
+    const handleClick = (way) => {
+        way === "left"
+        ? setCurrentSlide(currentSlide > 0 ? currentSlide - 1 : 2)
+        : setCurrentSlide(currentSlide < testiData.length -1 ? currentSlide + 1 : 0);
+    }
+
     return (
         <Cont id="testimonials">
             <Title>Testimonials</Title>
-            <Wrapper>
-                <ArrowLeftCont>
-                <ArrowLeft src="./assets/arrow.png"/>
-                </ArrowLeftCont>
-                <ContInner>
-                <TestimonialCard>
-                    <Image src="https://images.pexels.com/photos/4126738/pexels-photo-4126738.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"/>
-                    <NameCont>
-                        <Name>Eva Green</Name>
-                        <NameDesc>Queen of my heart</NameDesc>
-                    </NameCont>
-                    <Testimonial>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus totam suscipit, cupiditate nisi error id perferendis saepe impedit perspiciatis possimus quos quam! Impedit molestias ut odio iure eius corporis pariatur.</Testimonial>
-                </TestimonialCard>
-                <TestimonialCard>
-                    <Image src="https://images.pexels.com/photos/4126738/pexels-photo-4126738.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"/>
-                    <NameCont>
-                        <Name>Eva Green</Name>
-                        <NameDesc>Queen of my heart</NameDesc>
-                    </NameCont>
-                    <Testimonial>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus totam suscipit, cupiditate nisi error id perferendis saepe impedit perspiciatis possimus quos quam! Impedit molestias ut odio iure eius corporis pariatur.</Testimonial>
-                </TestimonialCard>
-                <TestimonialCard>
-                    <Image src="https://images.pexels.com/photos/4126738/pexels-photo-4126738.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"/>
-                    <NameCont>
-                        <Name>Eva Green</Name>
-                        <NameDesc>Queen of my heart</NameDesc>
-                    </NameCont>
-                    <Testimonial>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus totam suscipit, cupiditate nisi error id perferendis saepe impedit perspiciatis possimus quos quam! Impedit molestias ut odio iure eius corporis pariatur.</Testimonial>
-                </TestimonialCard>
+            <Cont1>
+            <ArrowLeftCont>
+                <ArrowLeft src="./assets/arrow.png" alt="arrow left" onClick={() => handleClick("left")}/>
+            </ArrowLeftCont>
+            {/* <Slider> */}
+            <Slider style={{transform: `translateX(-${currentSlide * 100}vw)`}}>
+                {testiData.map((testi) => (
+                    <Item key={testi.id}>
+                <ContInner >
+                   <TestimonialCard >
+                        <Image src={testi.img}/>
+                        <NameCont>
+                            <Name>{testi.name}</Name>
+                            <NameDesc>{testi.nameDesc}</NameDesc>
+                        </NameCont>
+                        <Testimonial>{testi.testimonial}</Testimonial>
+                    </TestimonialCard>
+                   <TestimonialCard >
+                        <Image src={testi.img}/>
+                        <NameCont>
+                            <Name>{testi.name}</Name>
+                            <NameDesc>{testi.nameDesc}</NameDesc>
+                        </NameCont>
+                        <Testimonial>{testi.testimonial}</Testimonial>
+                    </TestimonialCard>
+                   <TestimonialCard >
+                        <Image src={testi.img}/>
+                        <NameCont>
+                            <Name>{testi.name}</Name>
+                            <NameDesc>{testi.nameDesc}</NameDesc>
+                        </NameCont>
+                        <Testimonial>{testi.testimonial}</Testimonial>
+                    </TestimonialCard>
+                   
                 </ContInner>
-                <ArrowRightCont>
-                <ArrowRight src="./assets/arrow.png"/>
+               </Item>
+            
+            ))}
+            </Slider>
+            <ArrowRightCont>
+                <ArrowRight src="./assets/arrow.png" alt="arrow right" onClick={() => handleClick()}/>
                 </ArrowRightCont>
-            </Wrapper>
+            </Cont1>
         </Cont>
     )
 }
