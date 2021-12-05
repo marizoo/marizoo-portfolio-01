@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import ContactMe from '../components/ContactMe'
-import SocialMedia from '../components/SocialMedia'
 
 const Cont = styled.div`
 display: flex;
@@ -53,7 +52,6 @@ export const Contact = ({closeMenu}) => {
                 </ImgCont>
             </Left>
             <Right>
-                <SocialMedia />
                 <ContactMe />
             </Right>
         </Cont>
