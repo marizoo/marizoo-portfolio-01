@@ -65,6 +65,7 @@ overflow: hidden;
 const TitleWarning = styled.p`
 color: gray;
 margin-top: 20px;
+font-size: 16px;
 `
 
 const TextAnim = keyframes`
@@ -85,7 +86,7 @@ const TextAnim = keyframes`
 
 const TBWrapper = styled.div`
 height: 100%;
-animation: ${TextAnim} 8s ease-in-out infinite alternate;
+animation: ${TextAnim} 6s ease-in-out infinite alternate;
 `
 const TBItem = styled.div`
 font-size: 30px;
@@ -96,9 +97,9 @@ height: 50px;
 
 
 
-const Home = () => {
+const Home = ({closeMenu}) => {
     return (
-        <Cont id="home">
+        <Cont id="home" onClick={closeMenu}>
             <Left>
                 <ImageCont>
                     <Circle>
@@ -119,8 +120,8 @@ const Home = () => {
                     </TitleBottom>
                     <TitleWarning>
                         WARNING! <br/>
-                    This site contains corny puns <br/>
-                I won't be accountable for any offense or eye strain from your eye rolls.
+                    This site contains too-much-information and corny-puns, <br/>
+                excessive eye rolls may unconsciously occur.
                 
                     </TitleWarning>
                 </Wrapper>

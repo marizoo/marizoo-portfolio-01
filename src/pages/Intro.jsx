@@ -86,6 +86,7 @@ const Intro = () => {
                 <Desc>This site contains corny puns <br/>
                 I won't be accountable for any offense or eye strain from your eye rolls.</Desc>
                 </Titles> */}
+                 <MedTitle>Hover for the answer</MedTitle>
                 <ImgWrapper>
                     <Img src="./assets/dev-egg.svg"/>
                 </ImgWrapper>

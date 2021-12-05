@@ -129,7 +129,7 @@ const Testimonial = styled.p`
 text-align: center;
 `
 
-const Testimonials = () => {
+const Testimonials = ({closeMenu}) => {
 
     const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -173,7 +173,7 @@ const Testimonials = () => {
     }
 
     return (
-        <Cont id="testimonials">
+        <Cont id="testimonials" onClick={closeMenu}>
             <Title>Testimonials</Title>
             <Cont1>
             <ArrowLeftCont>

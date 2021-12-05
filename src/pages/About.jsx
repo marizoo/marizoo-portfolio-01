@@ -75,18 +75,27 @@ flex: 1.3;
 display: flex;
 justify-content: center;
 align-items: center;
-background-color: pink;
 `
-const LeftWrapper = styled.div``
+const LeftWrapper = styled.div`
+width: 100%;
+height: 100%;
+position: relative;
+`
+const Img = styled.img`
+width: 90%;
+position: absolute;
+bottom: 0;
+`
 
-const About = () => {
+const About = ({closeMenu}) => {
     return (
-        <Cont id="about">
+        <Cont id="about" onClick={closeMenu}>
             <Right>
                 <RightWrapper>
                     <RightTitle>My Tech Stack</RightTitle>
                     <DescWrapper>
-                    <DescTitle>Here are the stacks I'm currently using in my projects</DescTitle>
+                    <DescTitle>These days, I kept on falling in love with fictional characters online.
+                    Anyways... here are my current tech stacks:</DescTitle>
                     <Desc></Desc>
                     </DescWrapper>
                         <IconsContainer>
@@ -123,7 +132,7 @@ const About = () => {
             </Right>
             <Left>
                 <LeftWrapper>
-                    hello world joke!!!
+                    <Img src="./assets/dev-egg-hello.svg"/>
                 </LeftWrapper>
             </Left>
         </Cont>

@@ -1,4 +1,4 @@
-import { Mail, Twitter } from '@material-ui/icons'
+import { GitHub, Mail, Twitter, YouTube } from '@material-ui/icons'
 import React from 'react'
 import styled, {keyframes} from 'styled-components'
 
@@ -9,7 +9,7 @@ display: flex;
 align-items: center;
 justify-content: space-between;
 border-bottom: 1px solid rgba(0 ,0, 0, 0.2);
-z-index: 2;
+z-index: 6;
 position: fixed;
 bottom: 0;
 transition: all 1s ease;
@@ -81,13 +81,14 @@ flex: 1.5;
 display: flex;
 justify-content: start;
 `
-const ContactItem = styled.div`
+const ContactItem = styled.a`
 display: flex;
 align-items: center;
 margin-left: 30px;
 cursor: pointer;
 transition: all 0.5s ease;
 color: gray;
+text-decoration: none;
 
 &:hover {
 color: ${({theme}) => theme.colors.secondary};
@@ -95,7 +96,12 @@ color: ${({theme}) => theme.colors.secondary};
 
 &.active{
     color: white;
+}
 `
+
+
+    
+
 const ContactInfo = styled.span`
 margin-left: 3px;
 font-size: 16px;
@@ -166,13 +172,18 @@ const Topbar = ({menuOpen, setMenuOpen}) => {
                         
                 </LogoCont> 
                 <ContactCont  >
-                    <ContactItem className={menuOpen && "active"}>
+                    <ContactItem className={menuOpen && "active"} href="https://twitter.com/_marizoo" target="_blank" rel="noreferrer">
                         <Twitter/>
-                        <ContactInfo>@_marizoo</ContactInfo>
+                        <ContactInfo></ContactInfo>
+                        
                     </ContactItem>
-                    <ContactItem className={menuOpen && "active"}>
-                        <Mail/>
-                        <ContactInfo>marizoo@meow.com</ContactInfo>
+                    <ContactItem className={menuOpen && "active"} href="https://github.com/marizoo" target="_blank" rel="noreferrer">
+                        <GitHub/>
+                        <ContactInfo></ContactInfo>
+                    </ContactItem>
+                    <ContactItem className={menuOpen && "active"} href="https://youtube.com" target="_blank" rel="noreferrer">
+                        <YouTube />
+                        <ContactInfo></ContactInfo>
                     </ContactItem>
                 </ContactCont>
             </Left>

@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const Cont = styled.div`
 height: 100vw;
 width: 300px;
-z-index: 1;
+z-index: 5;
 background-color: ${({theme}) => theme.colors.primary};
 color: white;
 display: flex;
@@ -49,11 +49,11 @@ cursor: pointer;
     
 
 
-const Menu = ({menuOpen, setMenuOpen}) => {
+const Menu = ({menuOpen, setMenuOpen, closeMenu}) => {
 
-    const closeMenu = (e) => {
-        setMenuOpen(false);
-    }
+    // const closeMenu = (e) => {
+    //     setMenuOpen(false);
+    // }
 
     return (
         <Cont className={menuOpen && "active"}>
@@ -61,14 +61,15 @@ const Menu = ({menuOpen, setMenuOpen}) => {
                 <Li onClick={closeMenu}>
                     <Aa href="#home">Home</Aa>
                 </Li>
-                <Li onClick={closeMenu}>
-                    <Aa href="#intro">Intro</Aa>
-                </Li>
+                
                 <Li onClick={closeMenu}>
                     <Aa href="#about">About</Aa>
                 </Li>
                 <Li onClick={closeMenu}>
-                    <Aa href="#projects">Projects</Aa>
+                    <Aa href="#portfolio">Portfolio</Aa>
+                </Li>
+                <Li onClick={closeMenu}>
+                    <Aa href="#projects">Featured Projects</Aa>
                 </Li>
                 <Li onClick={closeMenu}>
                     <Aa href="#blog">Blog</Aa>
