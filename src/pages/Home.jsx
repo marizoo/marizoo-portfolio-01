@@ -102,7 +102,6 @@ height: 50px;
 const Home = ({closeMenu}) => {
     return (
         <Cont id="home" onClick={closeMenu}>
-            <AnimatedShapes />
             <Left>
                 <ImageCont>
                     <Circle>

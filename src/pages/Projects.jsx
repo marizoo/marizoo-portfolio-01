@@ -1,5 +1,7 @@
 import React, {useState} from 'react'
 import styled from 'styled-components'
+import { FaReact } from 'react-icons/fa'
+import { SiStyledcomponents } from 'react-icons/si'
 
 const Cont = styled.div`
 display: flex;
@@ -43,8 +45,7 @@ const DescBox = styled.div`
 flex: 4;
 height: 90%;
 display: flex;
-align-items: center;
-justify-content: center;
+
 `
 
 const DescCont = styled.div`
@@ -52,35 +53,31 @@ width: 90%;
 height: 70%;
 display: flex;
 flex-direction: column;
-justify-content: space-between;
-`
-
-const ImgCont = styled.div`
-width: 40px;
-height: 40px;
-border-radius: 50%;
-background-color: rgb(247, 188, 167);
-display: flex;
-align-items: center;
-justify-content: center;
-`
-
-const DescImg = styled.img`
-width: 25px;
 `
 
 const Title = styled.span`
 font-size: 25px;
+font-weight: 500;
+`
+
+const TechCont = styled.div`
+display: flex;
+align-items: center;
+font-size: 16px;
+color: gray;
+margin-bottom: 20px;
+`
+
+
+const TitleSmall = styled.span`
+font-size: 18px;
+font-weight: 500;
+cursor: pointer;
+margin-bottom: 10px;
 `
 
 const Desc = styled.p`
 font-size: 15px;
-`
-const TitleSmall = styled.span`
-font-size: 12px;
-font-weight: 600;
-text-decoration: underline;
-cursor: pointer;
 `
 
 const BoxScroll = styled.div`
@@ -92,7 +89,6 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-/* overflow: hidden; */
 overflow-y: scroll;
 
 &::-webkit-scrollbar {
@@ -140,18 +136,18 @@ const Projects = ({closeMenu}) => {
           id: "1",
           icon: "./assets/mobile.png",
           title: "Featured Project #1",
+          project: "E-commerce website",
           desc:
             "Lorematnimi beatae voluptatum dolore, corrupti, esse blanditiis culpa adipisci laboriosam aperiam! Laudantium quam itaque ea mollitia, excepturi velit magni! Labore nostrum sequi ipsam pariatur optio ipsa laudantium architecto aliquid maxime molestiae. Doloribus harum placeat deleniti voluptatem reprehenderit, suscipit voluptate debitis vero qui est. Laboriosam quia, rem amet maxime nostrum architecto!Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-          img:
-            "./assets/screenshot-edge-sm.png",
-        },
-        //   img:
-        //     "https://99designs-blog.imgix.net/blog/wp-content/uploads/2018/10/attachment_100040756-e1538485934255.jpeg?auto=format&q=60&fit=max&w=930",
-        // },
+            img:
+                "https://99designs-blog.imgix.net/blog/wp-content/uploads/2018/10/attachment_100040756-e1538485934255.jpeg?auto=format&q=60&fit=max&w=930",
+            },
+         
         {
           id: "2",
           icon: "./assets/globe.png",
           title: "Featured Project #2",
+          project: "Netflix Clone",
           desc:
             "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
           img:
@@ -161,6 +157,7 @@ const Projects = ({closeMenu}) => {
           id: "3",
           icon: "./assets/writing.png",
           title: "Featured Project #3",
+          project: "Social Media Admin Panel",
           desc:
             "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
           img:
@@ -191,12 +188,12 @@ const Projects = ({closeMenu}) => {
                             </BoxScroll>
                             <DescBox>
                                 <DescCont>
-                                    <ImgCont>
-                                        <DescImg src={d.icon} alt="icons"/>
-                                    </ImgCont>
                                     <Title>{d.title}</Title>
+                                    <TechCont>
+                                        React  | Styled Components
+                                    </TechCont>
+                                    <TitleSmall>{d.project}</TitleSmall>
                                     <Desc>{d.desc}</Desc>
-                                    <TitleSmall>Projects</TitleSmall>
                                 </DescCont>
                             </DescBox>
                         </Item>
