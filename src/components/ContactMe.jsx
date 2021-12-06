@@ -74,6 +74,25 @@ font-weight: 500;
 `
 
 const ContactMe = () => {
+
+    const [enteredName, setEnteredName] = useState('');
+    const [enteredSubject, setEnteredSubject] = useState('');
+    const [enteredEmail, setEnteredEmail] = useState('');
+    const [enteredMessage, setEnteredMessage] = useState('');
+
+    const nameChangeHandler = (event) => {
+        setEnteredName(event.target.value);
+    }
+    const subjectChangeHandler = (event) => {
+        setEnteredSubject(event.target.value);
+    }
+    const emailChangeHandler = (event) => {
+        setEnteredEmail(event.target.value);
+    }
+    const messageChangeHandler = (event) => {
+        setEnteredMessage(event.target.value);
+    }
+
     const formRef = useRef();
     const [emailSent, setEmailSent] = useState(false);
 
@@ -87,27 +106,43 @@ const ContactMe = () => {
       }, (error) => {
           console.log(error.text);
       });
+
+      setEnteredName('');
+      setEnteredSubject('');
+      setEnteredEmail('');
+      setEnteredMessage('');
       
     }
 
-    // NEED TO RESET the forms after submitting. coz nnow the value is still there.
-    // max taught me this before! need to find it.
+    
 
     return (
         <Cont>
             <Form ref={formRef} onSubmit={sendEmail}>
                 <Title>Send me a message </Title>
                 <ContInput>
-                    <Input type="text" required name="user_name" placeholder="Name"></Input>
+                    <Input type="text" required name="user_name" 
+                    value={enteredName}
+                    onChange={nameChangeHandler}
+                    placeholder="Name"></Input>
                 </ContInput>
                 <ContInput>
-                    <Input type="text" required name="user_subject" placeholder="Subject"></Input>
+                    <Input type="text" required name="user_subject" 
+                    value={enteredSubject}
+                    onChange={subjectChangeHandler}
+                    placeholder="Subject"></Input>
                 </ContInput>
                 <ContInput>
-                    <Input type="email" required name="user_email" placeholder="Email"></Input>
+                    <Input type="email" required name="user_email" 
+                    value={enteredEmail}
+                    onChange={emailChangeHandler}
+                    placeholder="Email"></Input>
                 </ContInput>
                 <ContInput>
-                    <TextArea placeholder="Message" required name="message"/>
+                    <TextArea placeholder="Message" 
+                    value={enteredMessage}
+                    onChange={messageChangeHandler}
+                    required name="message"/>
                 </ContInput>
                 
                 {!emailSent && <Button>Send</Button>}
