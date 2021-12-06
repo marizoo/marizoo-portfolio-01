@@ -1,11 +1,13 @@
 import React from 'react'
 import styled, {keyframes} from 'styled-components'
+import AnimatedShapes from '../components/AnimatedShapes'
 
 const Cont = styled.div`
 display: flex;
 width: 100vw;
 height: calc(100vh - 70px);
 scroll-snap-align: start;
+position: relative;
 `
 
 const Left = styled.div`
@@ -100,6 +102,7 @@ height: 50px;
 const Home = ({closeMenu}) => {
     return (
         <Cont id="home" onClick={closeMenu}>
+            <AnimatedShapes />
             <Left>
                 <ImageCont>
                     <Circle>
@@ -115,15 +118,14 @@ const Home = ({closeMenu}) => {
                         <TBWrapper>
                             <TBItem>Front-end Web Developer</TBItem>
                             <TBItem>Aspiring full-stack developer</TBItem>
-                            <TBItem>i like corny puns</TBItem>
+                            <TBItem>Happy New Year!!!</TBItem>
                         </TBWrapper>
                     </TitleBottom>
-                    <TitleWarning>
+                    {/* <TitleWarning>
                         WARNING! <br/>
                     This site contains too-much-information and corny-puns, <br/>
                 excessive eye rolls may unconsciously occur.
-                
-                    </TitleWarning>
+                    </TitleWarning> */}
                 </Wrapper>
             </Right>
         </Cont>

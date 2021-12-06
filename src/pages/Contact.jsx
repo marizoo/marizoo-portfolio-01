@@ -1,5 +1,6 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, {keyframes} from 'styled-components'
+import AnimatedShapes from '../components/AnimatedShapes'
 import ContactMe from '../components/ContactMe'
 
 const Cont = styled.div`
@@ -9,7 +10,10 @@ align-items: center;
 width: 100vw;
 height: calc(100vh - 70px);
 scroll-snap-align: start;
+position: relative;
 `
+
+
 const Left = styled.div`
 flex: 1;
 display: flex;
@@ -46,6 +50,7 @@ padding-top: 70px;
 export const Contact = ({closeMenu}) => {
     return (
         <Cont id="contact" onClick={closeMenu}>
+                <AnimatedShapes />
             <Left>
                 
                 <ImgCont>

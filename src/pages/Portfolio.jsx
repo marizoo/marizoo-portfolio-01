@@ -43,7 +43,7 @@ const Portfolio = ({closeMenu}) => {
         <Cont id="portfolio" onClick={closeMenu}>
             <TitleWrapper>
                     <Title>Portfolio</Title>
-                    <Desc>Hover to view the UI, then click in it to view the video description.</Desc>
+                    <Desc>Hover to view the UI, then click to view the video description.</Desc>
             </TitleWrapper>
             <Wrapper>
             <BrowserAnimation />

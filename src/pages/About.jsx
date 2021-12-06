@@ -95,8 +95,9 @@ const About = ({closeMenu}) => {
                 <RightWrapper>
                     <RightTitle>My Tech Stack</RightTitle>
                     <DescWrapper>
-                    <DescTitle>These days, I kept on falling in love with fictional characters online.
-                    Anyways... here are my current tech stacks:</DescTitle>
+                        <DescTitle> Here are my current tech stacks:</DescTitle>
+                    
+                    {/*These days, I kept on falling in love with fictional characters online. */}
                     <Desc></Desc>
                     </DescWrapper>
                         <IconsContainer>
