@@ -36,7 +36,7 @@ const Aa = styled.a``
 
 const Img = styled.img`
 width: 100%;
-transition: all 6s ease;
+transition: all 15s ease;
 
 `
 
@@ -50,8 +50,8 @@ const BrowserAnimation = () => {
                 <Circle></Circle>
                 <Circle></Circle>
             </Browser>
-            <Aa href="" target="_blank" rel="noreferrer">
-                <Img src="./assets/portfolio-1.png" alt="portfolio1"/>
+            <Aa href="https://www.youtube.com/" target="_blank" rel="noreferrer">
+                <Img src="./assets/screenshot-edge-sm.png" alt="portfolio1"/>
             </Aa>
         </Cont>
     )

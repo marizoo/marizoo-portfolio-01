@@ -22,7 +22,7 @@ const Circle = styled.div`
 width: 1100px;
 height: 1100px;
 border-radius: 50%;
-background-color: crimson;
+background-color: #cccccc;
 display: flex;
 align-items: center;
 justify-content: end;
@@ -103,7 +103,7 @@ const Home = ({closeMenu}) => {
             <Left>
                 <ImageCont>
                     <Circle>
-                    <Image src="./assets/man.png"/>
+                    <Image src="./assets/hello.svg"/>
                     </Circle>
                 </ImageCont>
             </Left>

@@ -19,9 +19,10 @@ position: relative;
 `
 
 const LeftImg = styled.img`
-width: 90%;
+width: 60%;
 position: absolute;
 bottom: 0;
+left: 100px;
 `
 
 const Right = styled.div`
@@ -86,10 +87,7 @@ width: 94%;
 const BlogWrapper = styled.div`
 flex: 4;
 width: 94%;
-
 border: 4px solid lightgray;
-/* border-top: 25px solid lightgray; */
-/* border-radius: 10px 10px 0 0; */
 border-bottom: none;
 padding-top: 50px;
 padding-right: 100px;
@@ -163,7 +161,7 @@ const Blog = ({closeMenu}) => {
         <Cont id="blog" onClick={closeMenu}>
             
                 <Left>
-                    <LeftImg src="./assets/dev-egg-bitch.svg"/>
+                    <LeftImg src="./assets/add-notes.svg"/>
                 </Left>
                 <Right> 
                

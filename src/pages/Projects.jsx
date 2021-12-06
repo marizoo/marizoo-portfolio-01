@@ -39,15 +39,15 @@ border: 1px solid white;
 
 `
 
-const Left = styled.div`
+const DescBox = styled.div`
 flex: 4;
-height: 80%;
+height: 90%;
 display: flex;
 align-items: center;
 justify-content: center;
 `
 
-const LeftCont = styled.div`
+const DescCont = styled.div`
 width: 90%;
 height: 70%;
 display: flex;
@@ -65,7 +65,7 @@ align-items: center;
 justify-content: center;
 `
 
-const LeftImg = styled.img`
+const DescImg = styled.img`
 width: 25px;
 `
 
@@ -83,11 +83,11 @@ text-decoration: underline;
 cursor: pointer;
 `
 
-const Right = styled.div`
+const BoxScroll = styled.div`
 margin-right: 15px;
 background-color: #e1e2e4;
 flex: 8;
-height: 100%;
+height: 90%;
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -111,7 +111,7 @@ overflow-y: scroll;
         background: #009eb3; 
     }
 `
-const RightImg = styled.img`
+const BoxImg = styled.img`
 width: 600px;
 /* transform: rotate(-10deg); */
 `
@@ -139,16 +139,19 @@ const Projects = ({closeMenu}) => {
         {
           id: "1",
           icon: "./assets/mobile.png",
-          title: "Project 1",
+          title: "Featured Project #1",
           desc:
             "Lorematnimi beatae voluptatum dolore, corrupti, esse blanditiis culpa adipisci laboriosam aperiam! Laudantium quam itaque ea mollitia, excepturi velit magni! Labore nostrum sequi ipsam pariatur optio ipsa laudantium architecto aliquid maxime molestiae. Doloribus harum placeat deleniti voluptatem reprehenderit, suscipit voluptate debitis vero qui est. Laboriosam quia, rem amet maxime nostrum architecto!Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
           img:
-            "https://99designs-blog.imgix.net/blog/wp-content/uploads/2018/10/attachment_100040756-e1538485934255.jpeg?auto=format&q=60&fit=max&w=930",
+            "./assets/screenshot-edge-sm.png",
         },
+        //   img:
+        //     "https://99designs-blog.imgix.net/blog/wp-content/uploads/2018/10/attachment_100040756-e1538485934255.jpeg?auto=format&q=60&fit=max&w=930",
+        // },
         {
           id: "2",
           icon: "./assets/globe.png",
-          title: "Project 2",
+          title: "Featured Project #2",
           desc:
             "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
           img:
@@ -157,7 +160,7 @@ const Projects = ({closeMenu}) => {
         {
           id: "3",
           icon: "./assets/writing.png",
-          title: "Project 3",
+          title: "Featured Project #3",
           desc:
             "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
           img:
@@ -179,22 +182,23 @@ const Projects = ({closeMenu}) => {
                 {data.map((d) => (
                     <Container>
                         <Item>
-                            <Left>
-                                <LeftCont>
+                            
+                            <BoxScroll>
+                                <BoxImg alt="project image" src="https://99designs-blog.imgix.net/blog/wp-content/uploads/2018/10/attachment_100040756-e1538485934255.jpeg?auto=format&q=60&fit=max&w=930"/>
+                                <BoxImg alt="project image" src="https://99designs-blog.imgix.net/blog/wp-content/uploads/2018/10/attachment_100040756-e1538485934255.jpeg?auto=format&q=60&fit=max&w=930"/>
+                                <BoxImg alt="project image" src="https://99designs-blog.imgix.net/blog/wp-content/uploads/2018/10/attachment_100040756-e1538485934255.jpeg?auto=format&q=60&fit=max&w=930"/>
+                                <BoxImg alt="project image" src="https://99designs-blog.imgix.net/blog/wp-content/uploads/2018/10/attachment_100040756-e1538485934255.jpeg?auto=format&q=60&fit=max&w=930"/>
+                            </BoxScroll>
+                            <DescBox>
+                                <DescCont>
                                     <ImgCont>
-                                        <LeftImg src={d.icon} alt="icons"/>
+                                        <DescImg src={d.icon} alt="icons"/>
                                     </ImgCont>
                                     <Title>{d.title}</Title>
                                     <Desc>{d.desc}</Desc>
                                     <TitleSmall>Projects</TitleSmall>
-                                </LeftCont>
-                            </Left>
-                            <Right>
-                                <RightImg alt="project image" src="https://99designs-blog.imgix.net/blog/wp-content/uploads/2018/10/attachment_100040756-e1538485934255.jpeg?auto=format&q=60&fit=max&w=930"/>
-                                <RightImg alt="project image" src="https://99designs-blog.imgix.net/blog/wp-content/uploads/2018/10/attachment_100040756-e1538485934255.jpeg?auto=format&q=60&fit=max&w=930"/>
-                                <RightImg alt="project image" src="https://99designs-blog.imgix.net/blog/wp-content/uploads/2018/10/attachment_100040756-e1538485934255.jpeg?auto=format&q=60&fit=max&w=930"/>
-                                <RightImg alt="project image" src="https://99designs-blog.imgix.net/blog/wp-content/uploads/2018/10/attachment_100040756-e1538485934255.jpeg?auto=format&q=60&fit=max&w=930"/>
-                            </Right>
+                                </DescCont>
+                            </DescBox>
                         </Item>
                         </Container>
                 ))}

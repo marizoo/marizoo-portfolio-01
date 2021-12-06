@@ -27,10 +27,10 @@ width: auto;
 height: auto;
 `
 const Img = styled.img`
-width: 90%;
+width: 60%;
 position: absolute;
-bottom: -10px;
-left: 40px;
+bottom: 0px;
+left: 80px;
 `
 const Right = styled.div`
 flex: 1;
@@ -40,6 +40,7 @@ align-items: center;
 justify-content: center;
 height: 100%;
 width: 100%;
+padding-top: 70px;
 `
 
 export const Contact = ({closeMenu}) => {
@@ -48,7 +49,7 @@ export const Contact = ({closeMenu}) => {
             <Left>
                 
                 <ImgCont>
-                    <Img src="./assets/dev-egg.svg" alt="the good egg"/>
+                    <Img src="./assets/mailbox.svg" alt="the good egg"/>
                 </ImgCont>
             </Left>
             <Right>

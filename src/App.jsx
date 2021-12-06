@@ -14,7 +14,8 @@ import Testimonials from "./pages/Testimonials";
 const theme = {
   colors: {
     primary: "#1d1d1d",
-    secondary: "#ee6e6e"
+    secondary: "#EF3D3D",
+    neutral: "#ccc"
   },
 }
 

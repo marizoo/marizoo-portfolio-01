@@ -77,14 +77,15 @@ justify-content: center;
 align-items: center;
 `
 const LeftWrapper = styled.div`
-width: 100%;
+width: 80%;
 height: 100%;
 position: relative;
 `
 const Img = styled.img`
-width: 90%;
+width: 75%;
 position: absolute;
 bottom: 0;
+right: 30px;
 `
 
 const About = ({closeMenu}) => {
@@ -132,7 +133,7 @@ const About = ({closeMenu}) => {
             </Right>
             <Left>
                 <LeftWrapper>
-                    <Img src="./assets/dev-egg-hello.svg"/>
+                    <Img src="./assets/influencer.svg"/>
                 </LeftWrapper>
             </Left>
         </Cont>
