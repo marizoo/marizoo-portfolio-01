@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import {FaHtml5, FaCss3Alt, FaGithub, FaReact, } from 'react-icons/fa'
-import {SiJavascript, SiStyledcomponents } from 'react-icons/si'
+import {FaHtml5, FaCss3Alt, FaGithub, FaReact, FaSass } from 'react-icons/fa'
+import {SiJavascript, SiRedux, SiStyledcomponents, SiMaterialui, SiJest } from 'react-icons/si'
 
 const Cont = styled.div`
 display: flex;
@@ -62,7 +62,7 @@ margin: 30px;
 line-height: 25px;
 `
 const Item = styled.li`
-font-size: 70px;
+font-size: 40px;
 color: #575757;
 `
 const ListDesc = styled.span`
@@ -94,12 +94,10 @@ const About = ({closeMenu}) => {
             <Right>
                 <RightWrapper>
                     <RightTitle>My Tech Stack</RightTitle>
-                    <DescWrapper>
-                        <DescTitle> Here are my current tech stacks:</DescTitle>
-                    
-                    {/*These days, I kept on falling in love with fictional characters online. */}
-                    <Desc></Desc>
-                    </DescWrapper>
+                    {/* <DescWrapper> */}
+                        {/* <DescTitle> Here are my current tech stacks:</DescTitle> */}
+                    {/* <Desc></Desc> */}
+                    {/* </DescWrapper> */}
                         <IconsContainer>
                             <Ul>
                                 <ItemCont>
@@ -123,10 +121,34 @@ const About = ({closeMenu}) => {
                                 <ListDesc>React</ListDesc>
                                 </ItemCont>
                                 <ItemCont>
+                                <Item><SiRedux/></Item>
+                                <ListDesc>Redux Toolkit</ListDesc>
+                                </ItemCont>
+                                <ItemCont>
+                                <Item><SiJest/></Item>
+                                <ListDesc>Jest</ListDesc>
+                                </ItemCont>
+
+                            </Ul>
+                        </IconsContainer>
+                    <DescWrapper>
+                        <DescTitle> And for styling:</DescTitle>
+                    <Desc></Desc>
+                    </DescWrapper>
+                        <IconsContainer>
+                            <Ul>
+                                <ItemCont>
+                                <Item><FaSass/></Item>
+                                <ListDesc>Sass</ListDesc>
+                                </ItemCont>
+                                <ItemCont>
                                 <Item><SiStyledcomponents/></Item>
                                 <ListDesc>Styled Components</ListDesc>
                                 </ItemCont>
-
+                                <ItemCont>
+                                <Item><SiMaterialui/></Item>
+                                <ListDesc>Material Ui</ListDesc>
+                                </ItemCont>
                             </Ul>
                         </IconsContainer>
                 </RightWrapper>
